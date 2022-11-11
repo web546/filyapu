@@ -1,0 +1,26 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class eb : MonoBehaviour
+{
+    [SerializeField]
+    private float _amplitudeY = 1;
+    [SerializeField]
+    private float _amplitudeX = 1;
+    [SerializeField]
+    private float _amplitudeZ = 1;
+
+    void Update()
+{
+       float y = MathF.Sin(Time.time) * _amplitudeY;
+       float x = MathF.Sin(Time.time) * _amplitudeX;
+       float z = MathF.Sin(Time.time) * _amplitudeZ;
+
+       
+ 
+        transform.position = new Vector3(x, y, z);
+}
+
+}
